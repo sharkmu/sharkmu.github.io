@@ -3,6 +3,8 @@ body
     font-family: monospace;
     background-color: #000;
     color: #00ff04;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 #p1
@@ -14,7 +16,7 @@ body
 }
 
 
-.container
+.about-me-container
 {
     width: 200px;
     margin: 0 auto;
@@ -35,4 +37,14 @@ ul {
 ul li::before 
 {
   content: ">> ";
+}
+
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    opacity: 0.7;
+    top: -20px;
+    will-change: transform;
 }
