@@ -20,3 +20,65 @@ a
     text-align: center;
     margin-top: 2%;
 }
+
+#p1 a
+{
+    color:#ec0d0d
+}
+
+.wrapper
+{
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh;
+}
+
+.center-container
+{
+    width: 200px;
+    margin: 0 auto;
+    background: rgb(18, 19, 19);
+    border: 0.1rem solid rgb(52, 48, 48);
+    width: 45%;
+    height: 55vh;
+}
+
+.center-ul {
+
+    list-style: none;
+    padding-left: 0;
+    margin-left: 1vh;
+    font-size: 1vw;
+}
+
+.center-ul li::before 
+{
+  content: ">> ";
+}
+
+.menu-container
+{
+    background: rgb(18, 19, 19);
+    border: 0.1rem solid rgb(52, 48, 48);
+    width: 10%;
+    height: 8vw;
+    margin-bottom: 20%;
+    font-size: 1vw;
+}
+
+.active
+{
+    color: #294dcf;
+}
+
+
+.confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    opacity: 0.7;
+    top: -20px;
+    will-change: transform;
+}
