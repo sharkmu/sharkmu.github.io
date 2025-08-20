@@ -4,6 +4,7 @@ function easterEgg()
 {
     if(clickCounter > 3)
     {
+        clickCounter = 0;
         startConfetti();
     } 
     else 
