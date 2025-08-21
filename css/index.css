@@ -1,0 +1,26 @@
+.popup-warning
+{
+    margin: 0 auto;
+    background: rgb(255, 150, 13);
+    border: 0.1rem solid rgb(52, 48, 48);
+    display: none;
+    justify-content: center; 
+    align-items: center;
+    font-size: 1vw;
+    color: #000000e1;
+    border-radius: 0.5rem;
+    font-weight: bold;
+}
+
+#popup-close
+{
+    position: absolute;
+    top: 1vh;
+    right: 1vh;
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #e63946;
+    cursor: pointer;
+}

@@ -36,7 +36,6 @@ a
 
 .center-container
 {
-    width: 200px;
     margin: 0 auto;
     background: rgb(18, 19, 19);
     border: 0.1rem solid rgb(52, 48, 48);
@@ -49,7 +48,7 @@ a
     list-style: none;
     padding-left: 0;
     margin-left: 1vh;
-    font-size: 1vw;
+    font-size: 1.5em;
 }
 
 .center-ul li::before 
@@ -61,10 +60,10 @@ a
 {
     background: rgb(18, 19, 19);
     border: 0.1rem solid rgb(52, 48, 48);
-    width: 10%;
-    height: 8vw;
+    min-width: 10%;
+    min-height: 8vw;
     margin-bottom: 20%;
-    font-size: 1vw;
+    font-size: 1.5em;
 }
 
 .active

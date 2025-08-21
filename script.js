@@ -1,3 +1,20 @@
+const popupWarning = document.querySelector('.popup-warning');
+const popupClose = document.getElementById("popup-close");
+window.onload = function() {
+    if (!localStorage.getItem("devPopupShown")) 
+    {
+        popupWarning.style.display = "flex";
+    }
+    popupClose.addEventListener("click", function() 
+    {
+        localStorage.setItem("devPopupShown", "true");
+        popupWarning.style.display = "none";
+    });
+    };
+
+
+// --- easterEgg ---
+
 let clickCounter = 0;
 
 function easterEgg()
@@ -12,6 +29,9 @@ function easterEgg()
         clickCounter++;
     }
 }
+
+// --- easterEgg END ---
+
 
 // --- CONFETTI by: ChatGPT ---
 
