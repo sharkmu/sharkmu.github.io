@@ -34,3 +34,12 @@ body
     width: fit-content;
     height: fit-content;
 }
+
+#pwGenInput, .pwBtn
+{
+    font-size: 0.8em;
+    background: transparent;
+    place-content: center;
+    text-align: center;
+    color: #ffff;
+}
