@@ -23,6 +23,11 @@
         <div class="center-container">
             <ul class="center-ul">
                 <li>language: <a href="hu/settings.html">magyar</a>/<a class="active" href="settings.html">english</a></li>
+                <li>
+                    <button class="exImportStorageBtn" onclick="exportLocalStorage();">export</button> 
+                    local storage / import local storage: <input type="file" id="importFile" 
+                    onchange="importLocalStorage(event)">
+                </li>
             </ul>
         </div>
     </div>
