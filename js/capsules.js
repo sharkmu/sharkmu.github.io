@@ -6,11 +6,12 @@ function renderCapsules() {
 
         const data = JSON.parse(localStorage.getItem("capsule")) || [];
 
-        data.forEach(item => {
+        for (let i = data.length - 1; i >= 0; i--) 
+        {
             const li = document.createElement("li");
-            li.textContent = item;
+            li.textContent = data[i];
             list.appendChild(li);
-        });
+        }
     }
 }
 
