@@ -12,12 +12,24 @@ function generatePassword()
 
 function pwGenCopy()
 {
-  var copyText = document.getElementById("pwGenInput");
+    var copyText = document.getElementById("pwGenInput");
 
-  copyText.select();
-  copyText.setSelectionRange(0, 99999);
+    copyText.select();
+    copyText.setSelectionRange(0, 99999);
 
-  navigator.clipboard.writeText(copyText.value);
+    navigator.clipboard.writeText(copyText.value);
 
-  alert("Copied the text: " + copyText.value);
+    alert("Copied the text: " + copyText.value);
+}
+
+function capsuleSave()
+{
+    const capsuleInput = document.getElementById("capsuleInput");
+    let data = JSON.parse(localStorage.getItem("capsule")) || [];
+
+    data.push(capsuleInput.value);
+
+    localStorage.setItem("capsule", JSON.stringify(data));
+
+    capsuleInput.value = "";
 }
