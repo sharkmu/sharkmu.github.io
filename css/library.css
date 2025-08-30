@@ -43,3 +43,20 @@ body
     text-align: center;
     color: #ffff;
 }
+
+#btn-back
+{
+    border-radius: 0.5rem;
+    background-color: #06c08b;
+    box-shadow: 0 0.1rem 0.9rem 0 rgb(30, 255, 0);
+    transition: background 0.3s ease, box-shadow 0.2s ease;
+    font-size: clamp(0.5rem, 2vw, 1.5rem);
+    padding: 0.6rem 1.2rem;
+    font-variant: small-caps;
+}
+
+#btn-back:hover
+{
+    background: rgba(98, 255, 0, 0.791);
+    box-shadow: 0 0.25rem 0.6rem rgba(0, 227, 57, 0.23);
+}
