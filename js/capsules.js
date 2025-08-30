@@ -1,4 +1,5 @@
-function renderCapsules() {
+function renderCapsules() 
+{
     if (localStorage.getItem("capsule") != null)
     {
         const list = document.getElementById("capsuleList");
@@ -14,5 +15,11 @@ function renderCapsules() {
         }
     }
 }
-
 window.onload = renderCapsules;
+
+
+function deleteCapsules() 
+{
+    localStorage.removeItem("capsule");
+    window.location.reload();
+}

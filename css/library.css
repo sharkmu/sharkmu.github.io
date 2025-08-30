@@ -60,3 +60,17 @@ body
     background: rgba(98, 255, 0, 0.791);
     box-shadow: 0 0.25rem 0.6rem rgba(0, 227, 57, 0.23);
 }
+
+#capsuleDeleterBtn 
+{
+    bottom: -5rem;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.6rem 1.2rem;
+    border-radius: 0.5rem;
+    background-color: #ff0000;
+    font-size: clamp(0.8rem, 2vw, 1rem);
+    font-weight: bold;
+    color: rgb(22, 21, 21);
+}
