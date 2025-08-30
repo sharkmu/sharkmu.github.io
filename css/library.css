@@ -17,7 +17,7 @@ body
 .tool-card {
     background-color: rgb(18, 19, 19);
     border: 0.1rem solid rgb(52, 48, 48);
-    height: 20rem;
+    height: relative;
     border-radius: 8px;
     text-align: center;
     font-size: 2rem;
