@@ -35,7 +35,7 @@ body
     height: fit-content;
 }
 
-#pwGenInput, .pwBtn
+.toolForm
 {
     font-size: 0.8em;
     background: transparent;
