@@ -1,6 +1,8 @@
 const popupWarning = document.querySelector('.popup-warning');
 const popupClose = document.getElementById("popup-close");
-window.onload = function() {
+
+function devPopup() 
+{
     if (!localStorage.getItem("devPopupShown")) 
     {
         popupWarning.style.display = "flex";
@@ -10,7 +12,17 @@ window.onload = function() {
         localStorage.setItem("devPopupShown", "true");
         popupWarning.style.display = "none";
     });
-    };
+}
+
+function defaultLanguage()
+{
+    if (localStorage.getItem("language") == null)
+    {
+        localStorage.setItem("language", "en");
+    }
+}
+
+window.onload = (devPopup(), defaultLanguage());
 
 
 // --- easterEgg ---
@@ -81,41 +93,3 @@ function startConfetti()
 }
 
 // --- Confetti END ---
-
-
-// --- export & import local storage by: ChatGPT ---
-
-function exportLocalStorage() 
-{
-    const data = JSON.stringify(localStorage, null, 2);
-    const blob = new Blob([data], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);
-    
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'localStorage_backup.json';
-    a.click();
-    
-    URL.revokeObjectURL(url);
-}
-
-function importLocalStorage(event) {
-    const file = event.target.files[0];
-    if (!file) return;
-
-    const reader = new FileReader();
-    reader.onload = function(e) {
-        try {
-            const data = JSON.parse(e.target.result);
-            for (let key in data) {
-                localStorage.setItem(key, data[key]);
-            }
-            alert('LocalStorage imported successfully!');
-        } catch (err) {
-            alert('Invalid JSON file');
-        }
-    };
-    reader.readAsText(file);
-}
-
-// --- export & import local storage END ---

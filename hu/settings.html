@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/settings.css">
     <script src="../js/script.js"></script>
+    <script defer src="../js/settings.js"></script>
 </head>
 <body>
     <p id="p1">ez a <a onclick="easterEgg()">csodálatos</a> beállítások</p>
@@ -22,7 +23,10 @@
         </div>
         <div class="center-container">
             <ul class="center-ul">
-                <li>nyelv: <a class="active" href="settings.html">magyar</a>/<a href="../settings.html">english</a></li>
+                <li>
+                    language: <a id="magyar" onclick="changeLanguage('hu');" href="settings.html">magyar</a> /
+                    <a id="english" onclick="changeLanguage('en');" href="../settings.html">english</a>
+                </li>
             </ul>
         </div>
     </div>
