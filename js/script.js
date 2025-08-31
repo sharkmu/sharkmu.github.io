@@ -20,6 +20,10 @@ function defaultLanguage()
     {
         localStorage.setItem("language", "en");
     }
+    if (localStorage.getItem("language") == "hu")
+    {
+        window.location.href = "hu/index.html";
+    }
 }
 
 window.onload = (devPopup(), defaultLanguage());
