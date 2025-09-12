@@ -1,8 +1,9 @@
-name: Build and Deploy WASM
+name: Build and Deploy
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
 
 jobs:
   build:
@@ -10,17 +11,27 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - uses: actions-rs/toolchain@v1
+      - name: Install Rust
+        uses: actions-rs/toolchain@v1
         with:
           toolchain: stable
           target: wasm32-unknown-unknown
+          override: true
 
-      - run: cargo install wasm-pack
+      - name: Install wasm-pack
+        run: cargo install wasm-pack
 
-      - run: wasm-pack build --target web
+      - name: Build WASM
+        run: wasm-pack build --target web --out-dir ./pkg
         working-directory: ./v2
 
-      - uses: peaceiris/actions-gh-pages@v3
+      - name: Copy index.html and app.js
+        run: |
+          cp ./v2/index.html ./index.html
+          cp ./v2/app.js ./app.js
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./v2
+          publish_dir: ./
