@@ -7,11 +7,12 @@ function devPopup()
     {
         popupWarning.style.display = "flex";
     }
-    popupClose.addEventListener("click", function() 
-    {
-        localStorage.setItem("devPopupShown", "true");
-        popupWarning.style.display = "none";
-    });
+}
+
+function devPopupClose() 
+{
+    localStorage.setItem("devPopupShown", "true");
+    popupWarning.style.display = "none";
 }
 
 function defaultLanguage()
@@ -97,3 +98,29 @@ function startConfetti()
 }
 
 // --- Confetti END ---
+
+
+async function showLatestRelease() {
+    const repo = "sharkmu/sharkmu.github.io";
+    const url = `https://api.github.com/repos/${repo}/releases/latest`;
+
+    const response = await fetch(url);
+    if (!response.ok) throw new Error("Hiba a lekérés során");
+    const data = await response.json();
+
+    const popup = document.getElementById("release-popup")
+    const popupContent = document.getElementById("release-popup-content");
+
+    popupContent.innerHTML = data.body;
+    popup.style.display = "flex";
+}
+
+if(localStorage.getItem("releasePopupShown") != "true")
+{
+    showLatestRelease();
+}
+
+function releasePopupClose() {
+    document.getElementById("release-popup").style.display = "none";
+    localStorage.setItem("releasePopupShown", "true");
+}

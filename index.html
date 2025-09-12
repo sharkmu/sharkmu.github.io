@@ -11,7 +11,7 @@
 <body>
     <div class="popup-warning">
         <p>Beware! This website is still under development.</p>
-        <button id="popup-close">&times;</button>
+        <button class="popup-close" id="dev-popup-close" onclick="devPopupClose();">&times;</button>
     </div>
     <p id="p1"><a onclick="easterEgg()">hello</a>, i'm sam/sharkmu</p>
     <div class="wrapper">
@@ -31,6 +31,11 @@
                 <li>skills: very skillful</li>
             </ul>
         </div>
+    </div>
+    <div id="release-popup">
+        <h1>New release 🎉</h1>
+        <p id="release-popup-content">a</p>
+        <button class="popup-close" onclick="releasePopupClose();">&times;</button>
     </div>
 </body>
 </html>
