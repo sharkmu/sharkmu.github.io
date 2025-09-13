@@ -23,6 +23,14 @@ body {
     }
 }
 
+.hover-transformation {
+    transition: transform 0.3s ease;
+}
+
+.hover-transformation:hover {
+    transform: scale(1.27);
+}
+
 .nav-bar {
     align-items: center;
     display: flex;
@@ -69,14 +77,14 @@ body {
     color: #f6eeeb;
 }
 
-.hu, .box {
+#hu, .box {
     font-size: 1.7rem;
     font-weight: 600;
     color: #24292f;
     text-align: center;
 }
 
-.hu a {
+#hu a {
     text-decoration: none;
     color: #24292f;
 }
