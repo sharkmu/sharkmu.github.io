@@ -1,0 +1,82 @@
+body {
+    background-color: #242323;
+    font-family: "Inter", sans-serif;
+}
+
+@media only screen and (min-width: 700px) {
+    .nav-bar-desktop {
+        display: block;
+    }
+
+    .nav-bar-mobile {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .nav-bar-desktop {
+        display: none;
+    }
+
+    .nav-bar-mobile {
+        display: block;
+    }
+}
+
+.nav-bar {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.right, .menu-boxes {
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.ellipse {
+    width: 3.2rem;
+    height: 3.2rem;
+    background-color: #f6eeeb;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.ellipse-img {
+    width: 2.6rem;
+    height: 2.6rem;
+    padding-top: 0.23rem;
+}
+
+.box {
+    width: 7.7rem;
+    height: 3.2rem;
+    border-radius: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box a {
+    text-decoration: none;
+    color: #f6eeeb;
+}
+
+.hu, .box {
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: #24292f;
+    text-align: center;
+}
+
+.hu a {
+    text-decoration: none;
+    color: #24292f;
+}
