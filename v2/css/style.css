@@ -35,15 +35,19 @@ body {
     align-items: center;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 
 .right, .menu-boxes {
     align-items: center;
     display: flex;
-    justify-content: flex-end;
     gap: 1rem;
+}
+
+.right {
+    position: fixed;
+    right: 1rem;
 }
 
 .ellipse, .burger-menu {
@@ -163,4 +167,5 @@ body {
     align-items: center;
     margin-top: 3.5rem;
     height: auto;
+    color: #f6eeeb;
 }
