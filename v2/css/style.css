@@ -177,4 +177,9 @@ body {
     border: 0.1rem solid rgb(52, 48, 48);
     width: 45%;
     height: 55vh;
+    padding: 1rem;
+}
+
+.content ul li {
+    margin-bottom: 10px;
 }
