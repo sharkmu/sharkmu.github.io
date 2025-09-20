@@ -176,7 +176,7 @@ body {
     background: rgb(18, 19, 19);
     border: 0.1rem solid rgb(52, 48, 48);
     width: 45%;
-    height: 55vh;
+    height: fit-content;
     padding: 1rem;
 }
 
