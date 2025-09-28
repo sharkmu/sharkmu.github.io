@@ -29,11 +29,11 @@ let container = document.querySelector("#blog-post-cards");
 container.removeChild(template);
 
 async function loadPosts() {
-  const res = await fetch("posts/posts.json");
+  const res = await fetch("_posts/posts.json");
   const files = await res.json();
 
   for (const file of files) {
-    const post = await loadPost(`posts/content/${file}`);
+    const post = await loadPost(`_posts/content/${file}`);
     addPost(post.meta, post.content);
   }
 }
@@ -46,6 +46,6 @@ function addPost(meta, content) {
     let metaImg = Object.entries(meta)[3];
     card.querySelector(".post-card-title").textContent = metaTitle[1];
     card.querySelector(".post-card-content").innerHTML = marked.parse(content);
-    card.querySelector(".post-card-img").src = "posts/assets/" + metaImg[1];
+    card.querySelector(".post-card-img").src = "_posts/assets/" + metaImg[1];
     container.appendChild(card);
 }
