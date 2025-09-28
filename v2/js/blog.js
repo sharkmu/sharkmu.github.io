@@ -33,7 +33,7 @@ async function loadPosts() {
   const files = await res.json();
 
   for (const file of files) {
-    const post = await loadPost(`/v2/posts/content/${file}`);
+    const post = await loadPost(`v2/posts/content/${file}`);
     addPost(post.meta, post.content);
   }
 }
