@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>sharkmu | home</title>
+    <title>sharkmu | blog</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/blog.css">
     <script defer src="js/script.js"></script>
+    <script defer src="js/blog.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
     <div class="nav-bar-desktop">
@@ -16,7 +19,7 @@
                 </a>
             </div>
             <div class="menu-boxes">
-                <div class="box"><p class="hover-transformation"><a href="blog.html">[blog]</a></p></div>
+                <div class="box"><p class="hover-transformation"><a href="index.html">[home]</a></p></div>
                 <div class="box"><p class="hover-transformation"><a href="projects.html">[projects]</a></p></div>
                 <div class="box"><p class="hover-transformation"><a href="library.html">[library]</a></p></div>
             </div>
@@ -53,7 +56,7 @@
             </div>
             <div id="nav-bar-mobile-view">
                 <ul class="nav-bar-mobile-view-ul">
-                    <li class="hover-transformation"><a href="blog.html">Blog</a></li>
+                    <li class="hover-transformation"><a href="index.html">Home</a></li>
                     <li class="hover-transformation"><a href="projects.html">Projects</a></li>
                     <li class="hover-transformation"><a href="library.html">Library</a></li>
                 </ul>
@@ -66,28 +69,13 @@
         </div>
     </div>
     <div class="container">
-        <h1>hello, i am sam / sharkmu</h1>
-        <div class="content">
-            <h2>About me</h2>
-            <ul>
-                <li>I am a hobby coder from Hungary</li>
-                <li>I enjoy playing video games</li>
-                <li>I like doing sports</li>
-            </ul>
-            <h3>My favourite countries (in alphabetical order)</h3>
-            <ul>
-                <li>China</li>
-                <li>Czech republic</li>
-                <li>Hungary</li>
-                <li>Iceland</li>
-                <li>Mongolia</li>
-                <li>Norway</li>
-                <li>Poland</li>
-                <li>Tajikistan</li>
-                <li>Turkmenistan</li>
-                <li>Uzbekistan</li>
-            </ul>
+        <h1>this is my bLoG</h1>
+        <div id="blog-post-cards">
+            <div class="post-card">
+                <img class="post-card-img">
+                <h2 class="post-card-title">Not loaded</h2>
+                <p class="post-card-content">Not loaded</p>
+            </div>
         </div>
     </div>
 </body>
-</html>
