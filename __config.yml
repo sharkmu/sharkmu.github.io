@@ -1,0 +1,9 @@
+title: Sharkmu's Personal Website
+description: A simple personal website powered by Github Pages
+markdown: kramdown
+theme: none
+
+collections:
+  blog:
+    output: true
+    permalink: /blog/:title/
