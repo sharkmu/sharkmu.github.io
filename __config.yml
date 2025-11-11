@@ -6,4 +6,4 @@ theme: none
 collections:
   blog:
     output: true
-    permalink: /v2/blog/:title/
+    permalink: /blog/:title/
